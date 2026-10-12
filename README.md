@@ -10,12 +10,12 @@
 
   OutSystems Platform Security Scanner
   By Adrian Martinez | HAAK Cybersecurity
-  Based on original 0-day research
+  Based on original security research
 ```
 
 **The first security scanner built specifically for OutSystems applications.**
 
-OutScan detects platform-level vulnerabilities in OutSystems 11.x and ODC applications, including the **viewName authorization bypass (CVE pending)**, model.js entity schema exposure, admin panel exposure, and configuration weaknesses. Based on original 0-day research from real penetration testing engagements.
+OutScan detects platform-level vulnerabilities in OutSystems 11.x and ODC applications, including the **viewName authorization bypass **, model.js entity schema exposure, admin panel exposure, and configuration weaknesses. Based on original security research from real penetration testing engagements.
 
 ---
 
@@ -43,7 +43,7 @@ OutScan understands these patterns and tests for them automatically.
 - Environment detection (Dev/QA/Pre-Prod/Production)
 - Module/application discovery
 
-#### viewName Authorization Bypass (0-day)
+#### viewName Authorization Bypass
 - Discover anonymous screens usable for bypass
 - Enumerate server actions accessible via viewName manipulation
 - Verify data exposure through bypassed actions
@@ -152,7 +152,7 @@ MODULES:
   --deep                  Deep scan with extended enumeration
   --modules LIST          Comma-separated module names
   --fingerprint           Platform detection only
-  --viewname              viewName auth bypass (0-day)
+  --viewname              viewName auth bypass detection
   --model-js              model.js schema extraction
   --screens               Screen & action enumeration
   --exposure              Admin panel exposure
@@ -242,7 +242,7 @@ outscan/
     └── modules/
         ├── __init__.py
         ├── fingerprint.py             # Platform detection
-        ├── viewname_bypass.py         # 0-day auth bypass
+        ├── viewname_bypass.py         # auth bypass detection
         ├── model_js.py                # Schema extraction
         ├── screen_enum.py             # Screen/action enumeration
         ├── exposure.py                # Admin panel exposure
